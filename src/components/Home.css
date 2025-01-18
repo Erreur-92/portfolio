@@ -364,11 +364,81 @@ footer {
     }
 }
 
-@media screen and (max-width: 316px) {
+@media (max-height: 820px) {
     .honeycomb {
         position: absolute !important;
         top: 7%;
-        left: 4%; /* Adjusted from 10% to 0% */
+        left: 4%;
+    }
+}
+
+@media (max-height: 710px) {
+    .honeycomb {
+        top: 8%;
+    }
+}
+
+@media (max-height: 615px) {
+    .honeycomb {
+        top: 9%;
+    }
+}
+
+@media (max-height: 570px) {
+    .honeycomb {
+        top: 10%;
+    }
+}
+
+@media (max-height: 510px) {
+    .honeycomb {
+        top: 11%;
+    }
+}
+
+@media (max-height: 460px) {
+    .honeycomb {
+        top: 12%;
+    }
+}
+
+@media (max-height: 420px) {
+    .honeycomb {
+        top: 13%;
+    }
+
+    .home-section {
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-height: 380px) {
+    .honeycomb {
+        top: 14%;
+    }
+}
+
+@media (max-height: 350px) {
+    .honeycomb {
+        top: 16%;
+    }
+}
+
+@media (max-height: 320px) {
+    .honeycomb {
+        top: 18%;
+    }
+}
+
+@media (max-height: 290px) {
+    .honeycomb {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 316px) {
+    .honeycomb {
+        top: 7%;
     }
 }
 
@@ -383,9 +453,7 @@ footer {
     }
 
     .honeycomb {
-        position: absolute !important;
         top: 7%;
-        left: 4%; /* Adjusted from 10% to 0% */
     }
 
     .terminal-title {
