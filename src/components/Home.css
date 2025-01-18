@@ -128,7 +128,7 @@ footer {
   .honeycomb {
     height: 20px;
     position: relative;
-    left: -25%;
+    left: -0.5%;
     scale: 0.5;
     width: 20px;
   }
@@ -210,3 +210,174 @@ footer {
     left: 0;
     top: 0;
   }
+
+@media screen and (max-width: 950px)
+{
+    .terminal-title {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    .honeycomb {
+        left: 4%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    main h1 {
+        font-size: 2.5rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+        width: 60%;
+    }
+
+    .honeycomb {
+        left: -4%;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        margin: 0rem -1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 0.8rem;
+        width: 80%;
+    }
+
+    .honeycomb {
+        left: -1.5%;
+    }
+
+    .terminal-title {
+        font-size: 0.8rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        margin: 0rem -1rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.7rem;
+        width: 90%;
+    }
+
+    .honeycomb {
+        left: -1%;
+    }
+
+    .terminal-title {
+        font-size: 0.7rem;
+    }
+
+    nav a {
+        font-size: 0.6rem;
+        margin: 0rem -1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main h1 {
+        font-size: 1.2rem;
+    }
+
+    main p {
+        font-size: 0.6rem;
+        width: 90%;
+    }
+
+    .honeycomb {
+        left: 0%;
+    }
+
+    .terminal-title {
+        font-size: 0.6rem;
+    }
+
+    nav a {
+        font-size: 0.5rem;
+        margin: 0rem -1rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    main h1 {
+        font-size: 1rem;
+    }
+
+    main p {
+        font-size: 0.5rem;
+        width: 90%;
+    }
+
+    .honeycomb {
+        position: absolute !important;
+        top: 6%;
+        left: 4%; /* Adjusted from 10% to 0% */
+    }
+
+    .terminal-title {
+        font-size: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.4rem;
+        margin: 0rem -1rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 316px) {
+    .honeycomb {
+        position: absolute !important;
+        top: 7%;
+        left: 4%; /* Adjusted from 10% to 0% */
+    }
+}
+
+@media screen and (max-width: 260px) {
+    main h1 {
+        font-size: 0.8rem;
+    }
+
+    main p {
+        font-size: 0.4rem;
+        width: 90%;
+    }
+
+    .honeycomb {
+        position: absolute !important;
+        top: 7%;
+        left: 4%; /* Adjusted from 10% to 0% */
+    }
+
+    .terminal-title {
+        font-size: 0.4rem;
+    }
+
+    nav a {
+        font-size: 0.3rem;
+        margin: 0rem -1rem;
+    }
+}
