@@ -42,15 +42,15 @@ function Home() {
           <div></div>
         </div>
         <nav>
-          <a href="#home">Home</a>
+          <a href="#home">Accueil</a>
           <a href="#about">À propos</a>
-          <a href="#projects">Projects</a>
+          <a href="#projects">Projets</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main id="home" className="home-section">
-        <h1>Home</h1>
+        <h1>Accueil</h1>
         <p className="terminal-text">
           {text}
           <span className="cursor" style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>
