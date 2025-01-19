@@ -56,6 +56,29 @@ function Home() {
           <span className="cursor" style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>
         </p>
       </main>
+      <div className="card-container">
+      <div class="card">
+  <div class="card-details">
+    <p class="text-title">1st card</p>
+    <p class="text-body">Here are the details of the card</p>
+  </div>
+  <button class="card-button">More info</button>
+</div>
+<div class="card">
+  <div class="card-details">
+    <p class="text-title">2nd cart</p>
+    <p class="text-body">Here are the details of the card</p>
+  </div>
+  <button class="card-button">More info</button>
+</div>
+<div class="card">
+  <div class="card-details">
+    <p class="text-title">3rd card</p>
+    <p class="text-body">Here are the details of the card</p>
+  </div>
+  <button class="card-button">More info</button>
+</div>
+</div>
 
       <footer>© 2025 - Mon Portfolio. Tous droits réservés.</footer>
     </div>

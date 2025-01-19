@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto Mono', monospace;
     background-image: radial-gradient(circle, #0f0f0f 1%, #000 99%);
     backdrop-filter: blur(1px);
     color: #00ff00;
@@ -59,6 +59,7 @@ main {
     text-align: center;
     animation: slideUp 1.5s ease-in-out forwards;
     animation-delay: 3s;
+    margin-top: 2rem;
 }
 
 main h1 {
@@ -466,3 +467,79 @@ footer {
         margin: 0rem -1rem;
     }
 }
+
+.card-container {
+    width: 100%;
+    position: aboslute;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 4rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    background: #003a051f;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #00ff00;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    font: monospace;
+   }
+   
+   .card-details {
+    color: #00ff00;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+    font: monospace;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #00ff00;
+    color: #085a00;
+    font: monospace;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(0, 112, 6);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #00ff37;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+    background-color: #00ff37;
+   }
