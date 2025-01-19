@@ -56,15 +56,20 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
     text-align: center;
     animation: slideUp 1.5s ease-in-out forwards;
     animation-delay: 3s;
-    margin-top: 2rem;
+    margin-top: 9rem;
+    margin-left: 32.59rem;
 }
 
-main h1 {
-    font-size: 3rem; /* Reduced from 3rem */
+h1 {
+    font-size: 3rem;
     margin-bottom: 10px;
+    top: 2.5%;
+    left: 44.2%;
+    position: absolute;
 }
 
 main p {
@@ -469,9 +474,9 @@ footer {
 }
 
 .card-container {
-    width: 100%;
+    width: 96%;
     position: aboslute;
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -481,6 +486,18 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 3s; /* Delay to match the card appearance timing */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .card {
@@ -494,7 +511,7 @@ footer {
     transition: 0.5s ease-out;
     overflow: visible;
     font: monospace;
-   }
+}
    
    .card-details {
     color: #00ff00;
@@ -543,3 +560,97 @@ footer {
     opacity: 1;
     background-color: #00ff37;
    }
+
+   .carte {
+    position: relative;
+    left: 52%;
+    scale: calc(1.2);
+    font: monospace;
+    margin-top: -7%;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 3s; /* Delay to match the carte appearance timing */
+  }
+
+  .loader {
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 40px;
+    padding: 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+  }
+  
+  .words {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+    );
+    z-index: 20;
+  }
+  
+  .word {
+    display: block;
+    height: 100%;
+    color:#00ff00;
+    padding-left: 6px;
+    animation: spin_4991 4s infinite;
+  }
+  
+  @keyframes spin_4991 {
+    10% {
+      -webkit-transform: translateY(-102%);
+      transform: translateY(-102%);
+    }
+  
+    25% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  
+    35% {
+      -webkit-transform: translateY(-202%);
+      transform: translateY(-202%);
+    }
+  
+    50% {
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+  
+    60% {
+      -webkit-transform: translateY(-302%);
+      transform: translateY(-302%);
+    }
+  
+    75% {
+      -webkit-transform: translateY(-300%);
+      transform: translateY(-300%);
+    }
+  
+    85% {
+      -webkit-transform: translateY(-402%);
+      transform: translateY(-402%);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-400%);
+      transform: translateY(-400%);
+    }
+  }

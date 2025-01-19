@@ -4,6 +4,8 @@ import './Home.css';
 function Home() {
   const [text, setText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
+  const [showCards, setShowCards] = useState(false);
+  const [showCarte, setShowCarte] = useState(false);
   const fullText = 'Bienvenue sur la page d\'accueil de mon portfolio. Ici, vous découvrirez mes projets, mon parcours et comment me contacter.';
 
   useEffect(() => {
@@ -28,6 +30,22 @@ function Home() {
     return () => clearInterval(cursorInterval);
   }, []);
 
+  useEffect(() => {
+    const cardTimeout = setTimeout(() => {
+      setShowCards(true);
+    }, 3000); // Show cards after 3 seconds
+
+    return () => clearTimeout(cardTimeout);
+  }, []);
+
+  useEffect(() => {
+    const carteTimeout = setTimeout(() => {
+      setShowCarte(true);
+    }, 3000); // Show carte after 3 seconds
+
+    return () => clearTimeout(carteTimeout);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -49,37 +67,52 @@ function Home() {
         </nav>
       </header>
 
+      <h1>Accueil</h1>
       <main id="home" className="home-section">
-        <h1>Accueil</h1>
         <p className="terminal-text">
           {text}
           <span className="cursor" style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>
         </p>
       </main>
-      <div className="card-container">
-      <div class="card">
-  <div class="card-details">
-    <p class="text-title">1st card</p>
-    <p class="text-body">Here are the details of the card</p>
-  </div>
-  <button class="card-button">More info</button>
-</div>
-<div class="card">
-  <div class="card-details">
-    <p class="text-title">2nd cart</p>
-    <p class="text-body">Here are the details of the card</p>
-  </div>
-  <button class="card-button">More info</button>
-</div>
-<div class="card">
-  <div class="card-details">
-    <p class="text-title">3rd card</p>
-    <p class="text-body">Here are the details of the card</p>
-  </div>
-  <button class="card-button">More info</button>
-</div>
-</div>
-
+      {showCards && (
+        <div className="card-container">
+          <div className="card">
+            <div className="card-details">
+              <p className="text-title">Projets</p>
+              <p className="text-body">Ici vous pourrez voir mes projets, mes programmes et des explications</p>
+            </div>
+            <button className="card-button">En savoir plus</button>
+          </div>
+          <div className="card">
+            <div className="card-details">
+              <p className="text-title">Contact</p>
+              <p className="text-body">Ici vous pourrez trouver où et comment me contacter</p>
+            </div>
+            <button className="card-button">En savoir plus</button>
+          </div>
+          <div className="card">
+            <div className="card-details">
+              <p className="text-title">À propos</p>
+              <p className="text-body">Ici vous pourrez en apprendre plus sur moi, mes compétences et mon parcours</p>
+            </div>
+            <button className="card-button">En savoir plus</button>
+          </div>
+        </div>
+      )}
+      {showCarte && (
+        <div className="carte">
+          <div className="loader">
+            <p>Coding</p>
+            <div className="words">
+              <span className="word">Python</span>
+              <span className="word">C</span>
+              <span className="word">HTML</span>
+              <span className="word">CSFML</span>
+              <span className="word">CSS</span>
+            </div>
+          </div>
+        </div>
+      )}
       <footer>© 2025 - Mon Portfolio. Tous droits réservés.</footer>
     </div>
   );
