@@ -66,7 +66,6 @@ function Home() {
           <a href="#contact">Contact</a>
         </nav>
       </header>
-
       <h1>Accueil</h1>
       <main id="home" className="home-section">
         <p className="terminal-text">
