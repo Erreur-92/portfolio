@@ -12,10 +12,11 @@ function Home() {
   const [isLoginComplete, setIsLoginComplete] = useState(false);
   const [loadingLines, setLoadingLines] = useState([]);
   const [isSiteVisible, setIsSiteVisible] = useState(false);
+  const [isNavVisible, setIsNavVisible] = useState(false);
 
   const fullText = 'Bienvenue sur la page d\'accueil de mon portfolio. Ici, vous découvrirez mes projets, mon parcours et comment me contacter.';
   const loginTarget = "admin";
-  const passwordTarget = "*****";
+  const passwordTarget = "********";
 
   useEffect(() => {
     if (!isTerminalVisible) {
@@ -112,13 +113,13 @@ function Home() {
       "execution_honeycomb_ui_loader 7.3M/bits 100%",
       "startup_initial_sequence_check OK",
       "portefeuille_déployé_succès.exe 100%",
-
-      
+      " ",
+      " ",
       ">>> démarrage_achevé_bienvenue_admin <<<",
     ];
 
     let index = 0;
-    const maxLines = 20; // Increased to show more lines
+    const maxLines = 15; // Increased to show more lines
     const interval = setInterval(() => {
       if (index < lines.length) {
         setLoadingLines((prev) => {
@@ -139,6 +140,10 @@ function Home() {
   useEffect(() => {
     simulateLogin();
   }, []);
+
+  const toggleNav = () => {
+    setIsNavVisible((prev) => !prev);
+  };
 
   return (
     <div className={`App ${isSiteVisible ? 'fade-in cathodic-effect' : ''}`}>
@@ -163,7 +168,10 @@ function Home() {
               <div></div>
               <div></div>
             </div>
-            <nav>
+            <button className="burger-menu" onClick={toggleNav}>
+              ☰
+            </button>
+            <nav className={isNavVisible ? 'visible' : ''}>
               <a href="#home">Accueil</a>
               <a href="#about">À propos</a>
               <a href="#projects">Projets</a>

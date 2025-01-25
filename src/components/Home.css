@@ -33,6 +33,10 @@ nav {
     gap: 20px;
 }
 
+nav.visible {
+    display: flex;
+}
+
 nav a {
     z-index: 2;
     color: #00ff00;
@@ -218,280 +222,26 @@ footer {
     top: 0;
   }
 
-@media screen and (max-width: 950px)
-{
-    .terminal-title {
-        font-size: 1rem;
+  
+  .card-container {
+      width: 96%;
+      position: aboslute;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 4rem;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+      animation-delay: 3s; /* Delay to match the card appearance timing */
     }
-
-    nav a {
-        font-size: 0.8rem;
-    }
-
-    .honeycomb {
-        left: 4%;
-    }
-}
-
-@media screen and (max-width: 780px) {
-    main h1 {
-        font-size: 2.5rem;
-    }
-
-    main p {
-        font-size: 0.9rem;
-        width: 60%;
-    }
-
-    .honeycomb {
-        left: -4%;
-    }
-
-    nav a {
-        font-size: 0.8rem;
-        margin: 0rem -1rem;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    main h1 {
-        font-size: 2rem;
-    }
-
-    main p {
-        font-size: 0.8rem;
-        width: 80%;
-    }
-
-    .honeycomb {
-        left: -1.5%;
-    }
-
-    .terminal-title {
-        font-size: 0.8rem;
-    }
-
-    nav a {
-        font-size: 0.7rem;
-        margin: 0rem -1rem;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    main h1 {
-        font-size: 1.5rem;
-    }
-
-    main p {
-        font-size: 0.7rem;
-        width: 90%;
-    }
-
-    .honeycomb {
-        left: -1%;
-    }
-
-    .terminal-title {
-        font-size: 0.7rem;
-    }
-
-    nav a {
-        font-size: 0.6rem;
-        margin: 0rem -1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    main h1 {
-        font-size: 1.2rem;
-    }
-
-    main p {
-        font-size: 0.6rem;
-        width: 90%;
-    }
-
-    .honeycomb {
-        left: 0%;
-    }
-
-    .terminal-title {
-        font-size: 0.6rem;
-    }
-
-    nav a {
-        font-size: 0.5rem;
-        margin: 0rem -1rem;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    main h1 {
-        font-size: 1rem;
-    }
-
-    main p {
-        font-size: 0.5rem;
-        width: 90%;
-    }
-
-    .honeycomb {
-        position: absolute !important;
-        top: 6%;
-        left: 4%; /* Adjusted from 10% to 0% */
-    }
-
-    .terminal-title {
-        font-size: 0.5rem;
-    }
-
-    nav a {
-        font-size: 0.4rem;
-        margin: 0rem -1rem;
-    }
-
-    footer {
-        font-size: 0.6rem;
-    }
-}
-
-@media (max-width: 375px) and (max-height: 667px) {
-    .honeycomb {
-        position: absolute !important;
-        top: 8%;
-        left: 4%; /* Adjusted from 10% to 0% */
-    }
-}
-
-@media (max-width: 360px) and (max-height: 740px) {
-    .honeycomb {
-        position: absolute !important;
-        top: 8%;
-        left: 4%; /* Adjusted from 10% to 0% */
-    }
-}
-
-@media (max-height: 820px) {
-    .honeycomb {
-        position: absolute !important;
-        top: 7%;
-        left: 4%;
-    }
-}
-
-@media (max-height: 710px) {
-    .honeycomb {
-        top: 8%;
-    }
-}
-
-@media (max-height: 615px) {
-    .honeycomb {
-        top: 9%;
-    }
-}
-
-@media (max-height: 570px) {
-    .honeycomb {
-        top: 10%;
-    }
-}
-
-@media (max-height: 510px) {
-    .honeycomb {
-        top: 11%;
-    }
-}
-
-@media (max-height: 460px) {
-    .honeycomb {
-        top: 12%;
-    }
-}
-
-@media (max-height: 420px) {
-    .honeycomb {
-        top: 13%;
-    }
-
-    .home-section {
-        margin-top: 2rem !important;
-    }
-}
-
-@media (max-height: 380px) {
-    .honeycomb {
-        top: 14%;
-    }
-}
-
-@media (max-height: 350px) {
-    .honeycomb {
-        top: 16%;
-    }
-}
-
-@media (max-height: 320px) {
-    .honeycomb {
-        top: 18%;
-    }
-}
-
-@media (max-height: 290px) {
-    .honeycomb {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 316px) {
-    .honeycomb {
-        top: 7%;
-    }
-}
-
-@media screen and (max-width: 260px) {
-    main h1 {
-        font-size: 0.8rem;
-    }
-
-    main p {
-        font-size: 0.4rem;
-        width: 90%;
-    }
-
-    .honeycomb {
-        top: 7%;
-    }
-
-    .terminal-title {
-        font-size: 0.4rem;
-    }
-
-    nav a {
-        font-size: 0.3rem;
-        margin: 0rem -1rem;
-    }
-}
-
-.card-container {
-    width: 96%;
-    position: aboslute;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 4rem;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 3s; /* Delay to match the card appearance timing */
-}
-
-@keyframes fadeIn {
+    
+    @keyframes fadeIn {
     0% {
         opacity: 0;
     }
@@ -512,17 +262,17 @@ footer {
     overflow: visible;
     font: monospace;
 }
-   
-   .card-details {
+
+.card-details {
     color: #00ff00;
     height: 100%;
     gap: .5em;
     display: grid;
     place-content: center;
     font: monospace;
-   }
-   
-   .card-button {
+}
+
+.card-button {
     transform: translate(-50%, 125%);
     width: 60%;
     border-radius: 1rem;
@@ -537,31 +287,31 @@ footer {
     bottom: 0;
     opacity: 0;
     transition: 0.3s ease-out;
-   }
-   
-   .text-body {
+}
+
+.text-body {
     color: rgb(0, 112, 6);
-   }
-   
-   /*Text*/
-   .text-title {
+}
+
+/*Text*/
+.text-title {
     font-size: 1.5em;
     font-weight: bold;
-   }
-   
-   /*Hover*/
-   .card:hover {
+}
+
+/*Hover*/
+.card:hover {
     border-color: #00ff37;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
-   
-   .card:hover .card-button {
+}
+
+.card:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
     background-color: #00ff37;
-   }
+}
 
-   .carte {
+.carte {
     position: relative;
     left: 52%;
     scale: calc(1.2);
@@ -572,9 +322,9 @@ footer {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
     animation-delay: 3s; /* Delay to match the carte appearance timing */
-  }
+}
 
-  .loader {
+.loader {
     font-weight: 500;
     font-size: 25px;
     -webkit-box-sizing: content-box;
@@ -585,102 +335,182 @@ footer {
     display: -ms-flexbox;
     display: flex;
     border-radius: 8px;
-  }
-  
-  .words {
+}
+
+.words {
     overflow: hidden;
     position: relative;
-  }
+}
 
-  .words::after {
+.words::after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      var(--bg-color) 10%,
-      transparent 30%,
-      transparent 70%,
-      var(--bg-color) 90%
-    );
-    z-index: 20;
-  }
-  
-  .word {
-    display: block;
-    height: 100%;
-    color:#00ff00;
-    padding-left: 6px;
-    animation: spin_4991 4s infinite;
-  }
-  
-  @keyframes spin_4991 {
-    10% {
-      -webkit-transform: translateY(-102%);
+        var(--bg-color) 10%,
+        transparent 30%,
+        transparent 70%,
+        var(--bg-color) 90%
+        );
+        z-index: 20;
+    }
+    
+    .word {
+        display: block;
+        height: 100%;
+        color:#00ff00;
+        padding-left: 6px;
+        animation: spin_4991 4s infinite;
+    }
+    
+    @keyframes spin_4991 {
+        10% {
+            -webkit-transform: translateY(-102%);
       transform: translateY(-102%);
     }
   
     25% {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
     }
-  
+    
     35% {
-      -webkit-transform: translateY(-202%);
-      transform: translateY(-202%);
+        -webkit-transform: translateY(-202%);
+        transform: translateY(-202%);
     }
-  
+    
     50% {
-      -webkit-transform: translateY(-200%);
-      transform: translateY(-200%);
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
     }
-  
+    
     60% {
-      -webkit-transform: translateY(-302%);
-      transform: translateY(-302%);
+        -webkit-transform: translateY(-302%);
+        transform: translateY(-302%);
     }
-  
+    
     75% {
-      -webkit-transform: translateY(-300%);
-      transform: translateY(-300%);
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
     }
-  
+    
     85% {
-      -webkit-transform: translateY(-402%);
-      transform: translateY(-402%);
+        -webkit-transform: translateY(-402%);
+        transform: translateY(-402%);
     }
-  
+    
     100% {
-      -webkit-transform: translateY(-400%);
-      transform: translateY(-400%);
+        -webkit-transform: translateY(-400%);
+        transform: translateY(-400%);
     }
   }
 
-@media screen and (max-width: 2560px) and (max-height: 817px) {
-    .terminal-title {
-        font-size: 1.5rem;
+  @media screen and (max-width: 2560px) and (max-height: 817px) {
+      .terminal-title {
+          font-size: 1.5rem;
+        }
+        
+        .honeycomb {
+            left: 48%;
+            top: 2%;
+        }
+        .terminal-text {
+            margin-right: -80%;
+        }
     }
-
-    .honeycomb {
-        left: 48%;
-        top: 2%;
+    
+    @media screen and (max-width: 1470px) and (max-height: 817px) {
+        .terminal-text {
+            margin-left: -122% !important;
+        }
+        
+        .honeycomb {
+            left: 48%;
+            top: 2%;
+        }
+        
+        h1 {
+            margin-left: -2% !important;
+        }
+        
     }
-    .terminal-text {
-        margin-right: -80%;
-    }
+    
+    .burger-menu {
+        display: none;
+  background: none;
+  border: none;
+  color: #00ff00;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .terminal-title {
+        font-size: 0.6rem;
+    }
+    .burger-menu {
+        display: block;
+        position: relative;
+        left: -1rem;
+    }
+    
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 50px;
+        right: 52px;
+        background-color: #000;
+        border: 2px solid #00ff00;
+        border-radius: 5px;
+      }
+    
+      nav.visible {
+        z-index: 1000000;
+        display: flex;
+      }
 
-@media screen and (max-width: 1470px) and (max-height: 817px) {
-    .terminal-text {
-        margin-left: -122% !important;
+      h1 {
+        font-size: 1.5rem;
+        left: 37%;
+        position: relative;
+        top: 6%;
+      }
+
+        main {
+            bottom: 4rem;
+            right: 126%;
+            position: relative;
+            width: 30%;
+        }
+
+      .honeycomb {
+        position: relative;
+        left: -70%;
+        scale: 0.5;
+        bottom: -3.2rem;
+        width: 20px;
+      }
+
+    .card-container {
+            display: none;
     }
 
-    .honeycomb {
-        left: 48%;
-        top: 2%;
+
+    .carte {
+        position: sticky;
+        margin-left: 3rem;
     }
 
-    h1 {
-        margin-left: -2% !important;
+    .words {
+        position: relative;
+        left: 5%;
+        top: 65%;
     }
 
+    footer {
+        position: sticky;
+        font-size: 0.6rem;
+        top: 5rem;
+    }
 }
