@@ -222,7 +222,7 @@ function Home() {
             <p className="hours">{currentTime.toLocaleTimeString()}</p>
             <div className="information-system">
               <pre id="terminal-output">
-                <p>User: admin</p> <br />
+                <p>User: Evan_Verplaetse</p> <br />
                 <p>OS: Ubuntu 24.04 LTS</p> <br />
                 <p>CPU: Intel i7-10700K</p> <br />
                 <p>GPU: NVIDIA GeForce RTX 3060</p> <br />

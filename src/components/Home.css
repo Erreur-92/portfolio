@@ -156,6 +156,7 @@ footer {
     font-family: monospace;
     position: absolute;
     top: 1rem;
+    background-color: #046b0160;
     left: -32rem;
     width: 22.05rem;
     border: 2px solid #00ff00;
@@ -201,6 +202,8 @@ pre {
     width: 20rem;
     border: 2px solid #00ff00;
     right: 9.95rem;
+    background-color: #046b0160;
+
 }
 
 .file:hover {
