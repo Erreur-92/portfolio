@@ -13,6 +13,10 @@ function Home() {
   const [loadingLines, setLoadingLines] = useState([]);
   const [isSiteVisible, setIsSiteVisible] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [cpuUsage, setCpuUsage] = useState(0);
+  const [memoryUsage, setMemoryUsage] = useState(0);
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [pressedKey, setPressedKey] = useState(null);
 
   const fullText = 'Bienvenue sur la page d\'accueil de mon portfolio. Ici, vous découvrirez mes projets, mon parcours et comment me contacter.';
   const loginTarget = "admin";
@@ -43,30 +47,30 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    if (!isTerminalVisible) {
-      const cardTimeout = setTimeout(() => {
-        setShowCards(true);
-      }, 3000);
-
-      return () => clearTimeout(cardTimeout);
-    }
-  }, [isTerminalVisible]);
-
-  useEffect(() => {
-    if (!isTerminalVisible) {
-      const carteTimeout = setTimeout(() => {
-        setShowCarte(true);
-      }, 3000);
-
-      return () => clearTimeout(carteTimeout);
-    }
-  }, [isTerminalVisible]);
-
-  useEffect(() => {
     if (isLoginComplete) {
       startLoadingSimulation();
     }
   }, [isLoginComplete]);
+
+  useEffect(() => {
+    simulateLogin();
+  }, []);
+
+  useEffect(() => {
+    const cpuInterval = setInterval(() => {
+      setCpuUsage(Math.floor(Math.random() * 100));
+      setMemoryUsage(Math.floor(Math.random() * 100));
+    }, 2000);
+
+    const timeInterval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => {
+      clearInterval(cpuInterval);
+      clearInterval(timeInterval);
+    };
+  }, []);
 
   const simulateLogin = () => {
     let loginIndex = 0;
@@ -114,12 +118,11 @@ function Home() {
       "startup_initial_sequence_check OK",
       "portefeuille_déployé_succès.exe 100%",
       " ",
-      " ",
       ">>> démarrage_achevé_bienvenue_admin <<<",
     ];
 
     let index = 0;
-    const maxLines = 15; // Increased to show more lines
+    const maxLines = 15;
     const interval = setInterval(() => {
       if (index < lines.length) {
         setLoadingLines((prev) => {
@@ -131,29 +134,65 @@ function Home() {
         clearInterval(interval);
         setTimeout(() => {
           setIsTerminalVisible(false);
-          setTimeout(() => setIsSiteVisible(true), 500); // Delay before showing site with fade-in
+          setTimeout(() => setIsSiteVisible(true), 500);
         }, 1000);
       }
     }, 100);
   };
 
-  useEffect(() => {
-    simulateLogin();
-  }, []);
-
   const toggleNav = () => {
     setIsNavVisible((prev) => !prev);
+  };
+
+  // Gestion des événements clavier physiques
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      const key = e.key.toUpperCase(); // Récupère la touche pressée et la met en majuscule
+      setPressedKey(key); // Enregistre la touche pressée
+      setTimeout(() => setPressedKey(null), 200); // Réinitialise après un court délai
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
+  // Liste des touches en AZERTY, organisées en lignes
+  const keys = [
+    ['A', 'Z', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+    ['Q', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M'],
+    ['W', 'X', 'C', 'V', 'B', 'N'],
+    ['Shift', 'Ctrl', 'Alt', 'Space', 'Entrée']
+  ];
+
+  // Fonction de gestion des clics sur les touches du clavier virtuel
+  const handleVirtualKeyPress = (key) => {
+    setPressedKey(key);
+    setTimeout(() => setPressedKey(null), 200); // Réinitialise après un court délai
   };
 
   return (
     <div className={`App ${isSiteVisible ? 'fade-in cathodic-effect' : ''}`}>
       {isTerminalVisible ? (
         <div id="terminal" className="terminal-fullscreen">
-          <div className="line">Login: <span id="login">{loginInput}</span></div>
-          <div className="line">Password: <span id="password">{passwordInput}</span></div>
+          <div className="line">
+            Login: <span id="login">{loginInput}</span>
+          </div>
+          <div className="line">
+            Password: <span id="password">{passwordInput}</span>
+          </div>
           {loadingLines.map((line, index) => (
-            <div key={index} className="line">{line}</div>
+            <div key={index} className="line">
+              {line}
+            </div>
           ))}
+          <div className="system-stats">
+            <div>CPU: {cpuUsage}%</div>
+            <div>MEM: {memoryUsage}%</div>
+            <div>Time: {currentTime.toLocaleTimeString()}</div>
+          </div>
         </div>
       ) : (
         <>
@@ -180,51 +219,59 @@ function Home() {
           </header>
           <h1>Accueil</h1>
           <main id="home" className="home-section">
-            <p className="terminal-text">
-              {text}
-              <span className="cursor" style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>
-            </p>
+            <p className="hours">{currentTime.toLocaleTimeString()}</p>
+            <div className="information-system">
+              <pre id="terminal-output">
+                <p>User: admin</p> <br />
+                <p>OS: Ubuntu 24.04 LTS</p> <br />
+                <p>CPU: Intel i7-10700K</p> <br />
+                <p>GPU: NVIDIA GeForce RTX 3060</p> <br />
+                <p>Version du projet: 1.0.0</p> <br />
+                <p>Dernière mise à jour: Jan 2025</p> <br />
+                <p>Disk Usage: 75% full</p> <br />
+                <p>Memory: 8GB RAM</p> <br />
+                <p>Connection: Online</p> <br />
+                <p className="cpu">CPU: {cpuUsage}%</p>
+                <p>Mémoire: {memoryUsage}%</p>
+              </pre>
+              <h2 className="info-system">Informations Système</h2>
+            </div>
+            <div className="system-info">
+              <div className="info-panel"></div>
+              <h2 className="file-manager-title">Gestionnaire de fichiers</h2>
+              <div className="file-manager">
+                <div className="file">amaze.wow</div>
+                <div className="file">archiv.txt</div>
+                <div className="file">src/</div>
+                <div className="file">easter.egg</div>
+                <div className="file">folio.jsx</div>
+                <div className="file">my_hunter.c</div>
+                <div className="file">readme.md</div>
+                <div className="file">.gitignore</div>
+                <div className="file">forkbomb.c</div>
+                <div className="file">file.json</div>
+                <div className="file">core.c</div>
+                <div className="file">neutrinos.py</div>
+              </div>
+            </div>
+            <div className="keyboard-container">
+              <div className="keyboard">
+                {keys.map((row, rowIndex) => (
+                  <div className="keyboard-row" key={rowIndex}>
+                    {row.map((key) => (
+                      <button
+                        key={key}
+                        className={`key ${pressedKey === key ? 'pressed' : ''}`}
+                        onClick={() => handleVirtualKeyPress(key)}
+                      >
+                        {key}
+                      </button>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
           </main>
-          {showCards && (
-            <div className="card-container">
-              <div className="card">
-                <div className="card-details">
-                  <p className="text-title">Projets</p>
-                  <p className="text-body">Ici vous pourrez voir mes projets, mes programmes et des explications</p>
-                </div>
-                <button className="card-button">En savoir plus</button>
-              </div>
-              <div className="card">
-                <div className="card-details">
-                  <p className="text-title">Contact</p>
-                  <p className="text-body">Ici vous pourrez trouver où et comment me contacter</p>
-                </div>
-                <button className="card-button">En savoir plus</button>
-              </div>
-              <div className="card">
-                <div className="card-details">
-                  <p className="text-title">À propos</p>
-                  <p className="text-body">Ici vous pourrez en apprendre plus sur moi, mes compétences et mon parcours</p>
-                </div>
-                <button className="card-button">En savoir plus</button>
-              </div>
-            </div>
-          )}
-          {showCarte && (
-            <div className="carte">
-              <div className="loader">
-                <p>Coding</p>
-                <div className="words">
-                  <span className="word">Python</span>
-                  <span className="word">C</span>
-                  <span className="word">HTML</span>
-                  <span className="word">CSFML</span>
-                  <span className="word">CSS</span>
-                </div>
-              </div>
-            </div>
-          )}
-          <footer>© 2025 - Mon Portfolio. Tous droits réservés.</footer>
         </>
       )}
     </div>
