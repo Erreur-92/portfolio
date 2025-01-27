@@ -191,7 +191,7 @@ function Home() {
           <div className="system-stats">
             <div>CPU: {cpuUsage}%</div>
             <div>MEM: {memoryUsage}%</div>
-            <div>Time: {currentTime.toLocaleTimeString()}</div>
+            <div>Time: {currentTime.toLocaleTimeString('fr-FR', { hour12: false })}</div>
           </div>
         </div>
       ) : (
@@ -219,7 +219,7 @@ function Home() {
           </header>
           <h1>Accueil</h1>
           <main id="home" className="home-section">
-            <p className="hours">{currentTime.toLocaleTimeString()}</p>
+            <p className="hours">{currentTime.toLocaleTimeString('fr-FR', { hour12: false })}</p>
             <div className="information-system">
               <pre id="terminal-output">
                 <p>User: Evan_Verplaetse</p> <br />
