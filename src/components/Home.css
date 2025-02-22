@@ -282,19 +282,18 @@
 .link-to-project {
   color: #7ca3f3;
   text-decoration: none;
-  margin-top: -14rem;
-  margin-left: -30rem;
+  margin-left: 15rem;
 }
 
 .cv-section {
   width: 100%;
   height: 80%;
-  margin-top: -6rem;
+  margin-top: -10rem;
   border-radius: 20px;
-  background: linear-gradient(110deg, #383838, #252525);
+  /* background: linear-gradient(110deg, #383838, #252525); */
   margin-left: 42rem;
-  box-shadow: 20px -20px 80px 1px #7ca3f3,
-              -20px 20px 80px 1px #b619bb;
+  /* box-shadow: 20px -20px 80px 1px #7ca3f3,
+              -20px 20px 80px 1px #b619bb; */
 }
 
 
@@ -485,5 +484,836 @@
       275px 6375px,
       278px 6375px,
       426.5px 6480px;
+  }
+}
+
+.cv-section p {
+  color: #7ca3f3;
+  height: 4rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  border: 2px solid #7ca3f3;
+  justify-content: center;
+  background: linear-gradient(110deg, #383838, #252525);
+  border-radius: 20px;
+  box-shadow: 10px 10px 50px #7ca3f3,
+              -10px -10px 50px #b619bb;
+  text-shadow: 0px 0px 16px #7ca3f3;
+  font-size: 1.5rem;
+}
+
+.cv-section iframe {
+  scale: 0.99;
+  margin-top: -0.8rem;
+  margin-left: -0.15rem;
+  width: 100%;
+  height: 80%;
+  box-shadow: 5px 5px 50px #7ca3f3,
+              -5px -5px 50px #b619bb;
+  border-radius: 20px;
+}
+
+.cv-section a {
+  color: #7ca3f3;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  border: 2px solid #7ca3f3;
+  background: linear-gradient(110deg, #383838, #252525);
+  display: flex;
+  justify-content: center;
+  text-shadow: 0px 0px 16px #7ca3f3;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 10px 10px 50px #7ca3f3,
+              -10px -10px 50px #b619bb;
+}
+
+.footer {
+  position: absolute;
+  top: 57rem;
+  color: white;
+  z-index: 3000;
+}
+
+@media screen and (min-width: 100px) and (max-width: 320px)
+{
+
+  .container {
+    width: 100%;
+    height: 315%;
+  }
+  .lander {
+    width: 80%;
+  }
+
+  .nav {
+    width: 80%;
+    margin-left: 1.5rem;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+  }
+
+  .home-text {
+    top: 5rem;
+  }
+
+  .home-text p {
+    font-size: 0.8rem;
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-card {
+    width: 25%;
+    height: 5rem;
+    top: -4rem;
+    left: 1rem;
+  }
+
+  .about-text {
+    top: 0.8rem;
+    left: 0.75rem;
+    width: 55%;
+  }
+
+  .about-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-card p {
+    display: none;
+  }
+
+  .contact-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -6rem;
+    left: 8.5rem;
+  }
+
+  .contact-card p {
+    display: none;
+  }
+
+  .contact-text {
+    top: 1rem;
+    left: 0.75rem;
+    width: 55%;
+    height: 50%;
+  }
+
+  .contact-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-section {
+    width: 100%;
+    height: 20%;
+    display:flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 50px #7ca3f3,
+                -5px 5px 50px #b619bb;
+  }
+
+  .media-section img {
+    position: relative;
+    scale: 1;
+    margin-left: 1rem;
+  }
+
+  .project-section {
+    width: 100%;
+    height: 50%;
+    margin-top: 0rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 80px #7ca3f3,
+                -5px 5px 80px #b619bb;
+  }
+
+  .link-to-project {
+    position: relative;
+    margin-top: 1.5rem;
+    margin-left: 1.2rem;
+  }
+
+  .cv-section {
+    width: 100%;
+    height: 80%;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+
+  .cv-section p {
+    height: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .cv-section a {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    position: absolute;
+    font-size: 0.8rem;
+    width: 90%;
+    top: 108rem !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px)
+{
+  .container {
+    width: 100%;
+    height: 315%;
+  }
+  .lander {
+    width: 80%;
+  }
+
+  .nav {
+    width: 80%;
+    margin-left: 1.5rem;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+  }
+
+  .home-text {
+    top: 5rem;
+  }
+
+  .home-text p {
+    font-size: 0.8rem;
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -4rem;
+    left: 1rem;
+  }
+
+  .about-text {
+    position: relative;
+    top: 0.1rem;
+    left: 0.4rem;
+    width: 55%;
+  }
+
+  .about-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-card p {
+    display: none;
+  }
+
+  .contact-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -6rem;
+    left: 10rem;
+  }
+
+  .contact-card p {
+    display: none;
+  }
+
+  .contact-text {
+    position: relative;
+    top: 0.2rem;
+    left: 0.4rem;
+    width: 55%;
+    height: 50%;
+  }
+
+  .contact-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-section {
+    width: 100%;
+    height: 20%;
+    display:flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 50px #7ca3f3,
+                -5px 5px 50px #b619bb;
+  }
+
+  .media-section img {
+    position: relative;
+    scale: 1;
+    margin-left: 1rem;
+  }
+
+  .project-section {
+    width: 100%;
+    height: 50%;
+    margin-top: 0rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 80px #7ca3f3,
+                -5px 5px 80px #b619bb;
+  }
+
+  .link-to-project {
+    position: relative;
+    margin-top: 1.5rem;
+    margin-left: 1.2rem;
+  }
+
+  .cv-section {
+    width: 100%;
+    height: 80%;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+
+  .cv-section p {
+    height: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .cv-section a {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    position: absolute;
+    font-size: 0.8rem;
+    width: 90%;
+    top: 108rem !important;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px)
+{
+  .container {
+    width: 100%;
+    height: 315%;
+  }
+  .lander {
+    width: 80%;
+  }
+
+  .nav {
+    width: 80%;
+    margin-left: 1.5rem;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+  }
+
+  .home-text {
+    top: 5rem;
+  }
+
+  .home-text p {
+    font-size: 0.8rem;
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -4rem;
+    left: 1.5rem;
+  }
+
+  .about-text {
+    position: relative;
+    top: 0.1rem;
+    left: 0.4rem;
+    width: 55%;
+  }
+
+  .about-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-card p {
+    display: none;
+  }
+
+  .contact-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -6rem;
+    left: 12rem;
+  }
+
+  .contact-card p {
+    display: none;
+  }
+
+  .contact-text {
+    position: relative;
+    top: 0.2rem;
+    left: 0.4rem;
+    width: 55%;
+    height: 50%;
+  }
+
+  .contact-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-section {
+    width: 100%;
+    height: 20%;
+    display:flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 50px #7ca3f3,
+                -5px 5px 50px #b619bb;
+  }
+
+  .media-section img {
+    position: relative;
+    scale: 1;
+    margin-left: 1rem;
+  }
+
+  .project-section {
+    width: 100%;
+    height: 50%;
+    margin-top: 0rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 80px #7ca3f3,
+                -5px 5px 80px #b619bb;
+  }
+
+  .link-to-project {
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 4rem;
+  }
+
+  .cv-section {
+    width: 100%;
+    height: 80%;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+
+  .cv-section p {
+    height: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .cv-section a {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    position: absolute;
+    font-size: 0.8rem;
+    width: 90%;
+    top: 108rem !important;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px)
+{
+  .container {
+    width: 100%;
+    height: 315%;
+  }
+  .lander {
+    width: 80%;
+  }
+
+  .nav {
+    width: 80%;
+    margin-left: 1.5rem;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+  }
+
+  .home-text {
+    top: 5rem;
+  }
+
+  .home-text p {
+    font-size: 0.8rem;
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -4rem;
+    left: 5rem;
+  }
+
+  .about-text {
+    position: relative;
+    top: 0.1rem;
+    left: 0.4rem;
+    width: 55%;
+  }
+
+  .about-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-card p {
+    display: none;
+  }
+
+  .contact-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -6rem;
+    left: 20rem;
+  }
+
+  .contact-card p {
+    display: none;
+  }
+
+  .contact-text {
+    position: relative;
+    top: 0.2rem;
+    left: 0.4rem;
+    width: 55%;
+    height: 50%;
+  }
+
+  .contact-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-section {
+    width: 100%;
+    height: 20%;
+    display:flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 50px #7ca3f3,
+                -5px 5px 50px #b619bb;
+  }
+
+  .media-section img {
+    position: relative;
+    scale: 1;
+    margin-left: 1rem;
+  }
+
+  .project-section {
+    width: 100%;
+    height: 50%;
+    margin-top: 0rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 80px #7ca3f3,
+                -5px 5px 80px #b619bb;
+  }
+
+  .link-to-project {
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 12rem;
+  }
+
+  .cv-section {
+    width: 100%;
+    height: 80%;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+
+  .cv-section p {
+    height: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .cv-section a {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    position: absolute;
+    font-size: 0.8rem;
+    width: 90%;
+    top: 108rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px)
+{
+  .container {
+    width: 100%;
+    height: 315%;
+  }
+  .lander {
+    width: 80%;
+  }
+
+  .nav {
+    width: 80%;
+    margin-left: 1.5rem;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+  }
+
+  .home-text {
+    top: 5rem;
+  }
+
+  .home-text p {
+    font-size: 0.8rem;
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -4rem;
+    left: 10rem;
+  }
+
+  .about-text {
+    position: relative;
+    top: 0.1rem;
+    left: 0.4rem;
+    width: 55%;
+  }
+
+  .about-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-card p {
+    display: none;
+  }
+
+  .contact-card {
+    position: relative;
+    width: 25%;
+    height: 5rem;
+    top: -6rem;
+    left: 27rem;
+  }
+
+  .contact-card p {
+    display: none;
+  }
+
+  .contact-text {
+    position: relative;
+    top: 0.2rem;
+    left: 0.4rem;
+    width: 55%;
+    height: 50%;
+  }
+
+  .contact-text span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-section {
+    width: 100%;
+    height: 20%;
+    display:flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 50px #7ca3f3,
+                -5px 5px 50px #b619bb;
+  }
+
+  .media-section img {
+    position: relative;
+    scale: 1;
+    margin-left: 1rem;
+  }
+
+  .project-section {
+    width: 100%;
+    height: 50%;
+    margin-top: 0rem;
+    margin-left: -0rem;
+    box-shadow: -5px 5px 80px #7ca3f3,
+                -5px 5px 80px #b619bb;
+  }
+
+  .link-to-project {
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 18rem;
+  }
+
+  .cv-section {
+    width: 100%;
+    height: 80%;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+
+  .cv-section p {
+    height: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .cv-section a {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    position: absolute;
+    font-size: 0.8rem;
+    width: 90%;
+    top: 108rem !important;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px)
+{
+  .cv-section {
+    position: relative;
+    scale: 0.9;
+    top: 5rem;
+    right: 9rem;
+  }
+
+  .media-section {
+    position: relative;
+    width: 100%;
+    top: 5rem;
+    left: 5rem;
+  }
+
+  .media-section img {
+    position: relative;
+    left: -1rem;
+  }
+
+  .media-section p {
+    position: relative;
+    left: -1rem;
+  }
+
+  .project-section {
+    position: relative;
+    width: 100%;
+    left: 12rem;
+  }
+
+  .home-footer {
+    position: relative;
+    width: 90%;
+    left: -2rem;
+  }
+
+  .about-card {
+    width: 40%;
+    margin-left: 1.5rem;
+  }
+
+  .about-text {
+    top: 2rem;
+    margin-left: -0.6rem;
+    width: 70%;
+  }
+
+  .about-text p {
+    font-size: 0.8rem;
+  }
+
+  .contact-card {
+    width: 40%;
+    margin-left: -2rem;
+  }
+
+  .contact-text {
+    top: 2rem;
+    margin-left: -0.6rem;
+    width: 70%;
+  }
+
+  .contact-text p {
+    font-size: 0.8rem;
+  }
+
+  .link-to-project {
+    position: relative;
+    left: -7.5rem;
+  }
+
+  .home-text {
+    top: 5rem;
+    font-size: 0.8rem;
   }
 }
