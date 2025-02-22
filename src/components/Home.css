@@ -6,6 +6,13 @@
   height: 100vh;
 }
 
+.volume-control {
+  position: absolute;
+  color: #7ca3f3;
+  z-index: 1000;
+  top: 1rem;
+  right: 1rem;
+}
 .lander {
   scale: 0.9;
   background: linear-gradient(110deg, #383838, #252525);
