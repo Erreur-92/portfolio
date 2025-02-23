@@ -22,7 +22,7 @@
   border: 1px solid #7ca3f3;
   box-shadow: -20px -20px 80px 1px #7ca3f3,
               20px 20px 80px 1px #b619bb;
-
+  animation: float 6s ease-in-out infinite;
 }
 
 .nav {
@@ -195,6 +195,7 @@
               20px 20px 80px 1px #7ca3f3;
   margin-top: -42rem;
   margin-left: -45rem;
+  animation: float 10s ease-in-out infinite;
 }
 
 .project-section h1 {
@@ -215,6 +216,7 @@
               20px -20px 80px 1px #7ca3f3;
   margin-top: -38rem;
   margin-left: -38rem;
+  animation: float 9s ease-in-out infinite;
 }
 
 .media-section img {
@@ -301,8 +303,20 @@
   margin-left: 42rem;
   /* box-shadow: 20px -20px 80px 1px #7ca3f3,
               -20px 20px 80px 1px #b619bb; */
+  animation: float 9s ease-in-out infinite;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
  .container::after {
   content: "";
