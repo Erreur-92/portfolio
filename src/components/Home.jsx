@@ -26,6 +26,9 @@ function Home() {
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
+      audioRef.current.play().catch(error => {
+        console.error("Failed to play background music:", error);
+      });
     }
   }, [volume]);
 
