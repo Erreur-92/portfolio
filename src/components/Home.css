@@ -1338,3 +1338,23 @@
     font-size: 0.8rem;
   }
 }
+
+@keyframes levelUpAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+.level-up {
+  position: absolute;
+  color: #09f;
+  font-weight: bold;
+  text-shadow: #09f 0 0 10px;
+  z-index: 20000; /* Increase z-index to ensure it appears above other elements */
+  animation: levelUpAnimation 2s forwards;
+}

@@ -10,18 +10,43 @@ function Home() {
   const [volume, setVolume] = useState(0.1);
   const audioRef = useRef(null);
   const clickSoundRef = useRef(null);
+  const [clickCount, setClickCount] = useState(0);
+  const [showLevelUp, setShowLevelUp] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const clickTimeoutRef = useRef(null);
 
   const handleVolumeChange = (event) => {
     setVolume(event.target.value);
   };
 
-  const handleClick = () => {
+  const handleClick = (event) => {
     if (clickSoundRef.current) {
       clickSoundRef.current.play().catch(error => {
         console.error("Failed to play click sound:", error);
       });
     }
+
+    setMousePosition({ x: event.clientX, y: event.clientY });
+    setClickCount(prevCount => prevCount + 1);
+
+    if (clickTimeoutRef.current) {
+      clearTimeout(clickTimeoutRef.current);
+    }
+
+    clickTimeoutRef.current = setTimeout(() => {
+      setClickCount(0);
+    }, 3000);
   };
+
+  useEffect(() => {
+    if (clickCount === 10) {
+      setShowLevelUp(true);
+      setTimeout(() => {
+        setShowLevelUp(false);
+      }, 2000);
+      setClickCount(0);
+    }
+  }, [clickCount]);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -48,7 +73,18 @@ function Home() {
 
 
   return (
-    <div className="Home">
+    <div className="Home" onClick={handleClick}>
+      {showLevelUp && (
+        <div
+          className="level-up"
+          style={{
+            top: mousePosition.y - 20,
+            left: mousePosition.x,
+          }}
+        >
+          Level up ++ !
+        </div>
+      )}
       <audio ref={audioRef} src={backgroundMusic} autoPlay loop></audio>
       <audio ref={clickSoundRef} src={clickSound}></audio>
       <div className="volume-control">
