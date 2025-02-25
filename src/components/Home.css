@@ -564,6 +564,7 @@
     width: 100%;
     height: 315%;
   }
+
   .lander {
     width: 80%;
   }
@@ -589,8 +590,17 @@
     font-size: 1.5rem;
   }
 
+  .home-footer {
+    position: relative;
+    top: 0.5rem;
+    scale: 0.9;
+    font-size: 1rem;
+    right: -13.5rem;
+    margin-left: -15rem;
+  }
+
   .about-card {
-    width: 25%;
+    width: 15% !important;
     height: 5rem;
     top: -4rem;
     left: 1rem;
@@ -613,7 +623,7 @@
 
   .contact-card {
     position: relative;
-    width: 25%;
+    width: 15% !important;
     height: 5rem;
     top: -6rem;
     left: 8.5rem;
@@ -646,6 +656,10 @@
                 -5px 5px 50px #b619bb;
   }
 
+  .media-section p {
+    margin-top: 4.5rem;
+  }
+
   .media-section img {
     position: relative;
     scale: 1;
@@ -663,8 +677,8 @@
 
   .link-to-project {
     position: relative;
-    margin-top: 1.5rem;
     margin-left: 1.2rem;
+    top: -2rem;
   }
 
   .cv-section {
@@ -688,16 +702,270 @@
     padding: 0.5rem;
   }
 
-  .footer {
+  .footer p {
     position: absolute;
     font-size: 0.8rem;
     width: 90%;
-    top: 108rem !important;
+    top: -5rem !important;
   }
+
+  @media screen and (min-height: 740px) and (max-height: 830px) {
+    .container {
+      height: 170rem !important;
+    }
+    .lander {
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+    }
+  }
+
+  @media screen and (min-height: 675px) and (max-height: 740px) {
+  .home-text p {
+    font-size: 0.7rem !important;
+  }
+
+  .container {
+    height: 160rem !important;
+  }
+
+  .footer {
+    margin-top: -7rem !important;
+  }
+  }
+
+  @media screen and (min-height: 610px) and (max-height: 675px) {
+    .home-text p {
+      font-size: 0.7rem !important;
+    }
+
+    .home-text {
+      top: 3rem !important;
+    }
+
+    .nav-text p {
+      font-size: 0.8rem ;
+    }
+
+    .link-to-project {
+      scale: 0.7;
+      top: -3rem;
+    }
+
+    .project-section h1 {
+      font-size: 1rem;
+    }
+
+    .about-card {
+      scale: 0.8;
+      margin-top: -4rem !important;
+    }
+
+    .contact-card {
+      scale: 0.8;
+    }
+
+    .container {
+      height: 150rem !important;
+    }
+
+    .footer {
+      margin-top: -15rem !important;
+    }
+  }
+
+  @media screen and (min-height: 550px) and (max-height: 610px) {
+    .home-text p {
+      font-size: 0.7rem !important;
+    }
+
+    .lander {
+      height: 30rem;
+    }
+
+    .home-text {
+      top: 3rem !important;
+    }
+
+    .nav-text p {
+      font-size: 0.8rem ;
+    }
+
+    .link-to-project {
+      scale: 0.7;
+      top: -3rem;
+    }
+
+    .project-section h1 {
+      font-size: 1rem;
+    }
+
+    .about-card {
+      scale: 0.8;
+      margin-top: -4rem !important;
+    }
+
+    .contact-card {
+      scale: 0.8;
+    }
+
+    .container {
+      height: 145rem !important;
+    }
+
+    .footer {
+      margin-top: -18rem !important;
+    }
+  }
+
+  @media screen and (min-height: 450px) and (max-height: 550px) {
+    .home-text p {
+      font-size: 0.7rem !important;
+    }
+
+    .lander {
+      height: 30rem;
+      margin-top: 10rem !important;
+    }
+
+    .home-text {
+      top: 3rem !important;
+    }
+
+    .nav-text p {
+      font-size: 0.8rem ;
+    }
+
+    .link-to-project {
+      scale: 0.7;
+      top: -3rem;
+    }
+
+    .project-section h1 {
+      font-size: 1rem;
+    }
+
+    .about-card {
+      scale: 0.8;
+      margin-top: -4rem !important;
+    }
+
+    .contact-card {
+      scale: 0.8;
+    }
+
+    .container {
+      height: 160rem !important;
+    }
+
+    .footer {
+      margin-top: -14rem !important;
+    }
+  }
+
+  @media screen and (min-height: 350px) and (max-height: 450px) {
+    .home-text p {
+      font-size: 0.7rem !important;
+    }
+
+    .lander {
+      height: 30rem;
+      margin-top: 10rem !important;
+    }
+
+    .home-text {
+      top: 3rem !important;
+    }
+
+    .nav-text p {
+      font-size: 0.8rem ;
+    }
+
+    .link-to-project {
+      scale: 0.7;
+      top: -3rem;
+    }
+
+    .project-section h1 {
+      font-size: 1rem;
+    }
+
+    .about-card {
+      scale: 0.8;
+      margin-top: -4rem !important;
+    }
+
+    .contact-card {
+      scale: 0.8;
+    }
+
+    .container {
+      height: 160rem !important;
+    }
+
+    .footer {
+      margin-top: -17rem !important;
+    }
+  }
+
+  @media screen and (max-height: 350px) {
+    .home-text p {
+      font-size: 0.7rem !important;
+    }
+
+    .lander {
+      height: 30rem;
+      margin-top: 15rem !important;
+    }
+
+    .home-text {
+      top: 3rem !important;
+    }
+
+    .nav-text p {
+      font-size: 0.8rem ;
+    }
+
+    .link-to-project {
+      scale: 0.7;
+      top: -3rem;
+    }
+
+    .project-section h1 {
+      font-size: 1rem;
+    }
+
+    .about-card {
+      scale: 0.8;
+      margin-top: -4rem !important;
+    }
+
+    .contact-card {
+      scale: 0.8;
+    }
+
+    .container {
+      height: 165rem !important;
+    }
+
+    .footer {
+      margin-top: -18rem !important;
+  }
+}
 }
 
 @media screen and (min-width: 320px) and (max-width: 375px)
 {
+  .home-footer {
+    position: relative;
+    top: 0.5rem;
+    scale: 0.9;
+    font-size: 1rem;
+    right: -13.5rem;
+    margin-left: -15rem;
+  }
+
   .container {
     width: 100%;
     height: 315%;
@@ -728,8 +996,7 @@
   }
 
   .about-card {
-    position: relative;
-    width: 25%;
+    width: 15% !important;
     height: 5rem;
     top: -4rem;
     left: 1rem;
@@ -752,11 +1019,10 @@
   }
 
   .contact-card {
-    position: relative;
-    width: 25%;
+    width: 15% !important;
     height: 5rem;
-    top: -6rem;
-    left: 10rem;
+    top: -4rem;
+    margin-left: -1rem;
   }
 
   .contact-card p {
@@ -793,6 +1059,12 @@
     margin-left: 1rem;
   }
 
+  .media-section p {
+    margin-left: -4rem;
+    margin-top: 5rem;
+    color: #7ca3f3;
+  }
+
   .project-section {
     width: 100%;
     height: 50%;
@@ -805,7 +1077,7 @@
   .link-to-project {
     position: relative;
     margin-top: 1.5rem;
-    margin-left: 1.2rem;
+    margin-left: 2.5rem !important;
   }
 
   .cv-section {
@@ -834,6 +1106,88 @@
     font-size: 0.8rem;
     width: 90%;
     top: 108rem !important;
+  }
+
+  @media screen and (min-height: 650px) and (max-height: 830px) {
+    .container {
+      height: 170rem !important;
+    }
+    .lander {
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -7rem;
+    }
+  }
+
+  @media screen and (min-height: 550px) and (max-height: 650px) {
+    .container {
+      height: 175rem !important;
+    }
+    .lander {
+      margin-top: 10rem;
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -8rem;
+    }
+  }
+
+  @media screen and (min-height: 430px) and (max-height: 550px) {
+    .container {
+      height: 180rem !important;
+    }
+    .lander {
+      margin-top: 10rem;
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -10rem !important;
+    }
+
+    .project-section h1 {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (min-height: 320px) and (max-height: 430px) {
+    .container {
+      height: 185rem !important;
+    }
+    .lander {
+      margin-top: 20rem;
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -11rem;
+    }
+
+    .project-section h1 {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-height: 320px) {
+    .container {
+      height: 190rem !important;
+    }
+    .lander {
+      margin-top: 25rem;
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -12rem;
+    }
+
+    .project-section h1 {
+      font-size: 0.8rem;
+    }
+    
   }
 }
 
@@ -868,12 +1222,20 @@
     font-size: 1.5rem;
   }
 
-  .about-card {
+  .home-footer {
     position: relative;
-    width: 25%;
+    top: 0.5rem;
+    scale: 0.9;
+    font-size: 1rem;
+    right: -13.5rem;
+    margin-left: -19rem;
+  }
+
+  .about-card {
+    width: 15% !important;
     height: 5rem;
     top: -4rem;
-    left: 1.5rem;
+    left: 6.5rem !important;
   }
 
   .about-text {
@@ -893,11 +1255,10 @@
   }
 
   .contact-card {
-    position: relative;
-    width: 25%;
+    width: 15% !important;
     height: 5rem;
-    top: -6rem;
-    left: 12rem;
+    top: -4rem;
+    left: 16rem !important;
   }
 
   .contact-card p {
@@ -934,6 +1295,12 @@
     margin-left: 1rem;
   }
 
+  .media-section p {
+    margin-left: -4rem;
+    margin-top: 5rem;
+    color: #7ca3f3;
+  }
+
   .project-section {
     width: 100%;
     height: 50%;
@@ -946,7 +1313,7 @@
   .link-to-project {
     position: relative;
     margin-top: -2rem;
-    margin-left: 4rem;
+    right: 7.8rem !important;
   }
 
   .cv-section {
@@ -960,12 +1327,12 @@
     height: 3rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 0.8rem;
+    font-size: 1rem !important;
     padding: 0.5rem;
   }
 
   .cv-section a {
-    font-size: 0.8rem;
+    font-size: 1rem !important;
     margin-top: 0.5rem;
     padding: 0.5rem;
   }
@@ -975,6 +1342,91 @@
     font-size: 0.8rem;
     width: 90%;
     top: 108rem !important;
+  }
+
+  @media screen and (min-height: 650px) and (max-height: 830px) {
+    .container {
+      height: 170rem !important;
+    }
+    .lander {
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -7rem;
+    }
+  }
+
+  @media screen and (min-height: 550px) and (max-height: 650px) {
+    .container {
+      height: 175rem !important;
+    }
+    .lander {
+      margin-top: 10rem;
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -8rem;
+    }
+  }
+
+  @media screen and (min-height: 430px) and (max-height: 550px) {
+    .container {
+      height: 180rem !important;
+    }
+    .lander {
+      margin-top: 10rem;
+      height: 35rem;
+    }
+    .footer {
+      position: sticky;
+      margin-top: -10rem;
+    }
+
+    .project-section h1 {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (min-height: 330px) and (max-height: 430px) {
+    .container {
+      height: 185rem !important;
+    }
+
+    .lander {
+      margin-top: 20rem;
+      height: 35rem;
+    }
+
+    .footer {
+      position: sticky;
+      margin-top: -11rem;
+    }
+
+    .project-section h1 {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-height: 330px) {
+    .container {
+      height: 190rem !important;
+    }
+
+    .lander {
+      margin-top: 25rem;
+      height: 35rem;
+    }
+
+    .footer {
+      position: sticky;
+      margin-top: -11rem;
+    }
+
+    .project-section h1 {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -1355,6 +1807,6 @@
   color: #09f;
   font-weight: bold;
   text-shadow: #09f 0 0 10px;
-  z-index: 20000; /* Increase z-index to ensure it appears above other elements */
+  z-index: 20000;
   animation: levelUpAnimation 2s forwards;
 }
