@@ -265,9 +265,6 @@ function Home() {
           <a href={cvPdf} download="Evan_VERPLAETSE_CV.pdf" className="download-button" onClick={handleClick}>Télécharger le CV</a>
         </div>
       </div>
-      <div className="footer">
-        <p>© 2025 - Evan Verplaetse. Tous droits réservés. Aucune partie de ce site ne peut être reproduite ou utilisée sans l'autorisation explicite d'Evan Verplaetse.</p>
-      </div>
       <div className="container"></div>
     </div>
   );
